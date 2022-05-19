@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heater</title>
+    <link rel="stylesheet" href="/css/ac.css">
+</head>
+<body onload="see()">
+        <h1>Heater</h1>
+    
+        <!-- <label for="">ON / OFF</label><br>
+        <label for="door">Switch</label>
+        <input type="checkbox" name="val" id="door"> -->
+        <button onclick="me()" id="btn" ondblclick="you()">Click to ON</button>
+        <!-- <form action="/ac" method="POST"> -->
+        <br>
+        <br>
+        <div class="slidecontainer" id="one">
+            <input type="range" min="1" max="100" value="1" class="slider" id="myRange" name="num">
+            <p>Value: <span id="demo"></span></p>
+        </div>
+    
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            const a = output.innerHTML = slider.value;
+            console.log(a)
+            
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+    
+            function see() {
+                const a = document.getElementById("myRange").disabled = true;
+                console.log("see")
+            }
+            function me() {
+                const a = document.getElementById("myRange").disabled = false;
+                document.getElementById("btn").innerHTML = "Double Click to OFF";
+                console.log("me")
+            }
+            function you() {
+                const a = document.getElementById("myRange").disabled = true;
+                document.getElementById("btn").innerHTML = "Click to ON";
+                console.log("you")
+            }
+            </script>
+            <!-- <button type="submit">Submit</button>
+    </form> -->
+        <!-- <form action="/ac" method="POST">
+            <label for="">ON / OFF</label><br>
+            <label for="door">Switch</label>
+            <input type="checkbox" name="val" id="door">
+            <br>
+            <br>
+            <div class="slidecontainer">
+                <input type="range" min="1" max="100" value="1" class="slider" id="myRange" name="num">
+                <p>Value: <span id="demo"></span></p>
+            </div>
+            <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                const a = output.innerHTML = slider.value;
+                console.log(a)
+                
+                slider.oninput = function() {
+                  output.innerHTML = this.value;
+                }
+                </script>
+            <button type="submit">Enter</button>
+        </form> -->
+    
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light</title>
+    <style>
+        #vid{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lights</h1>
+
+    <button onclick="document.getElementById('myImage').src='/images/on.jpg', pics()" id="all">On all the Light</button>
+    <br>
+    <button onclick="document.getElementById('myImage').src='/images/one_on.jpg', pics()" id="all_one">On Light one</button>
+    <br>
+    <button onclick="document.getElementById('myImage').src='/images/two_on.jpg', pics()" id="all_two">On Light two</button>
+    <br>
+    <button onclick="document.getElementById('myImage').src='/images/three_on.jpg', pics()" id="all_three">On Light three</button>
+    <br>
+    <button onclick="document.getElementById('myImage').src='/images/four_on.jpg', pics()" id="all_four">On Light Four</button>
+    
+    <img id="myImage" src="/images/off.jpg" style="width:200px" height="200px">
+    <video src="/vid/house1.mp4" width="300px" height="300px" autoplay id="vid"></video>
+
+
+    <button onclick="document.getElementById('myImage').src='/images/off.jpg', pics(), btnShow()">Off all the Light</button>
+    <button onclick="play()" id="one">On lights in automatic sequence</button>
+
+    <script>
+        function play() {
+            document.getElementById("myImage").style.display = "none"
+            document.getElementById("one").style.display = "none"
+            document.getElementById("all").style.display = "none"
+            document.getElementById("all_one").style.display = "none"
+            document.getElementById("all_two").style.display = "none"
+            document.getElementById("all_three").style.display = "none"
+            document.getElementById("all_four").style.display = "none"
+            document.getElementById("vid").style.display = "block"
+            var x = document.getElementById("vid");
+            x.autoplay = true;
+            x.load();
+        }
+        function pics() {
+            document.getElementById("vid").style.display = "none"
+            document.getElementById("one").style.display = "block"
+            document.getElementById("myImage").style.display = "block"
+        }
+        function btnShow() {
+            document.getElementById("all").style.display = "block"
+            document.getElementById("all_one").style.display = "block"
+            document.getElementById("all_two").style.display = "block"
+            document.getElementById("all_three").style.display = "block"
+            document.getElementById("all_four").style.display = "block"
+        }
+    </script>
+</body>
+</html>

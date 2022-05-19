@@ -1,0 +1,294 @@
+body{
+    background-image: url("/images/smart-lighting.png");
+    background-size: cover;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+.main{
+    width: 550px;
+    height: 600px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 20px 25px 33px rgb(0, 0, 0);
+}
+.sub-one{
+    width: 100%;
+    height: 50%;
+    background-image: url("/images/smart-lighting.png");
+    background-size: cover;
+    z-index: -1;
+}
+.sub-two{
+    width: 100%;
+    height: 50%;
+    background-color: white;
+}
+.sub-one h1{
+    color: white;
+    margin-left: 27%;
+    margin-right: 27%;
+    margin-top: 35px;
+    margin-bottom: 60px;
+}
+.sub-one h3{
+    color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 80px;
+}
+.sub-one p{
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#warn{
+    margin-left: 25%;
+    margin-right: 20%;
+    font-size: 20px;
+    color: Red;
+}
+#user{
+    color: black;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+#email{
+    width: 60%;
+    height: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-image: url("/images/smart-lighting.png");
+    background-size: cover;
+}
+::placeholder{
+    color: white;
+    opacity: 1;
+    padding-left: 10px;
+}
+:-ms-input-placeholder{
+    color: white;
+    padding-left: 10px;
+}
+::-ms-input-placeholder{
+    color: white;
+    padding-left: 10px;
+}
+#houseId{
+    width: 60%;
+    height: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-image: url("/images/smart-lighting.png");
+    background-size: cover;
+}
+#submit{
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-image: url("/images/smart-lighting.png");
+    border-radius: 10px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+#else{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1115px){
+    .main{
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width: 975px){
+    .main{
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width: 850px){
+    .main{
+        margin-left: 17%;
+    }
+}
+@media screen and (max-width: 765px){
+    .main{
+        margin-left: 13%;
+    }
+}
+@media screen and (max-width: 700px){
+    .main{
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 660px){
+    .main{
+        margin-left: 6%;
+    }
+}
+@media screen and (max-width: 615px){
+    .main{
+        margin-left: 3%;
+    }
+}
+@media screen and (max-width: 600px){
+    .main{
+        width: 100%;
+        height: 650px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-image: url("/images/smart-lighting.png");
+        z-index: -1;
+    }
+    .sub-two{
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        height: 55%;
+    }
+    .sub-one{
+        /* border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px; */
+        height: 45%;
+        z-index: 1;
+    }
+    .sub-one h1{
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    .sub-one h3{
+        margin-bottom: 70px;
+    }
+    #email{
+        margin-bottom: 25px;
+    }
+    #houseId{
+        margin-bottom: 25px;
+    }
+    #user{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 490px){
+    .sub-one h3{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .sub-one p{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #email{
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #houseId{
+        width: 70%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #submit{
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+    #else{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    #user{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 483px){
+    .sub-one h1{
+        margin-left: 20%;
+        margin-right: 20px;
+    }
+    #user{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 470px){
+    #warn{
+        margin-left: 20%;
+        margin-left: 15%;
+    }
+}
+@media screen and (max-width: 418px){
+    .sub-one h3{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .sub-one p{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    #user{
+        margin-bottom: 30px;
+    }
+    #email{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #houseId{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #else{
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    #user{
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+@media screen and (max-width: 398px){
+    #warn{
+        margin-left: 10%;
+        margin-right: 5%;
+    }
+}
+@media screen and (max-width: 365px){
+    #else{
+        margin-left: 10%;
+    }
+}
+@media screen and (max-width: 345px){
+    .sub-one h1{
+        font-size: 25px;
+        margin-left: 20%;
+    }
+    .sub-one h3{
+        font-size: 15px;
+    }
+    #else{
+        margin-left: 0%;
+    }
+}
+@media screen and (max-width: 317px){
+    #user{
+        margin-left: 20%;
+        margin-right: 0%;
+    }
+    #submit{
+        margin-left: 30%;
+    }
+}
+@media screen and (max-width: 309px){
+    #warn{
+        margin-left: 0%;
+    }
+}

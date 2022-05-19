@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sub-one">
+            <div class="fin">
+                <h2>Smart Connect</h2>
+                <h3>There is no Better way to Control your House</h3>
+            </div>
+            <p id="exist"><%= exists %></p>
+            <br>
+            <h2 id="sign">Sign Up</h2>
+            <form action="/register" method="POST">
+                <!-- <label for="name">Full name:</label><br> -->
+                <input type="text" name="name" id="name" placeholder="Full name: e.g Mugabe Lador" required>
+                <br>
+                <!-- <label for="email">Email:</label><br> -->
+                <input type="email" name="email" id="email" placeholder="Email: e.g example@gmail.com" required>
+                <br>
+                <!-- <label for="houseId">House ID:</label><br> -->
+                <input type="number" name="houseId" id="houseId" placeholder="House ID: e.g 0000" required>
+                <br>
+                <label for="" id="devices">Devices</label><br>
+                <input type="checkbox" name="door" id="door"><label for="door" id="door-lbl">Doors  </label>
+                <br>
+                <input type="checkbox" name="ac" id="ac"><label for="ac" id="ac-lbl">AC</label>
+                <br>
+                <input type="checkbox" name="heater" id="heater"><label for="heater" id="heater-lbl">Heater</label>
+                <br>
+                <input type="checkbox" name="light" id="light"><label for="bulb" id="light-lbl">Lights</label>
+                <br>
+                <!-- <label for="curtain">Curtains:</label>
+                <input type="checkbox" name="curtain" id="curtain">
+                <br> -->
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+        <div class="sub-two">
+            <h2>Smart Connect</h2>
+            <h3>There is no Better way to Control your House</h3>
+        </div>
+    </div>
+</body>
+</html>
