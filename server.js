@@ -17,7 +17,7 @@ const lightRouter = require('./Routes/light')
 const PORT = process.env.PORT || 4000
 
 // Connect to Database
-mongoose.connect('mongodb://localhost/smart', {
+mongoose.connect('mongodb+srv://LoSwift:Ife@2004@smart.h0fcc.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then((res) => {
