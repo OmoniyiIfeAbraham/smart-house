@@ -8,70 +8,62 @@
     <link rel="stylesheet" href="/css/ac.css">
 </head>
 <body onload="see()">
-        <h1>Heater</h1>
-    
-        <!-- <label for="">ON / OFF</label><br>
-        <label for="door">Switch</label>
-        <input type="checkbox" name="val" id="door"> -->
-        <button onclick="me()" id="btn" ondblclick="you()">Click to ON</button>
-        <!-- <form action="/ac" method="POST"> -->
-        <br>
-        <br>
-        <div class="slidecontainer" id="one">
-            <input type="range" min="1" max="100" value="1" class="slider" id="myRange" name="num">
-            <p>Value: <span id="demo"></span></p>
+        <h1 style="color: white;">Heater</h1>
+        <div class="main">
+            <div class="one">
+
+            </div>
+            <div class="two">
+                <div class="slidecontainer" id="one">
+                    <input type="range" min="1" max="100" value="1" class="slider" id="myRange" name="num">
+                    <input type="range" min="1" max="100" value="1" class="slider" id="Range" name="num">
+                    <p id="val">Value: <span id="demo">1%</span></p>
+                    <p id="tem">Temperature: <span id="dem">0.7 degree Celcius</span></p>
+                </div>
+                <button onclick="me()" id="btn" ondblclick="you()"><img  id="huh" src="/images/power.png" alt="Click to Add" style="width: 80px; height: 80px; border-radius: 50%;"></button>
+                <p style="color: white;" id="click">Click to On</p>
+            </div>
         </div>
+        <button onclick="me()" id="btn" ondblclick="you()">Click to ON</button>
     
         <script>
-            var slider = document.getElementById("myRange");
-            var output = document.getElementById("demo");
-            const a = output.innerHTML = slider.value;
-            console.log(a)
-            
-            slider.oninput = function() {
-              output.innerHTML = this.value;
-            }
-    
-            function see() {
-                const a = document.getElementById("myRange").disabled = true;
-                console.log("see")
-            }
-            function me() {
-                const a = document.getElementById("myRange").disabled = false;
-                document.getElementById("btn").innerHTML = "Double Click to OFF";
-                console.log("me")
-            }
-            function you() {
-                const a = document.getElementById("myRange").disabled = true;
-                document.getElementById("btn").innerHTML = "Click to ON";
-                console.log("you")
-            }
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        var out = document.getElementById("dem");
+        const a = output.innerHTML = slider.value;
+        console.log(a)
+        
+        slider.oninput = function() {
+          output.innerHTML = this.value + "%";
+          out.innerHTML = (this.value) * 0.7 + " degree Celcius"
+        }
+
+        function see() {
+            const a = document.getElementById("myRange").disabled = true;
+            const b = document.getElementById("Range").style.display = "none";
+            document.getElementById("val").style.display = "none";
+            document.getElementById("tem").style.display = "none";
+            console.log("see")
+        }
+        function me() {
+            const a = document.getElementById("myRange").disabled = false;
+            const b = document.getElementById("Range").style.display = "none";
+            const c = document.getElementById("myRange").style.display = "block";
+            document.getElementById("val").style.display = "block";
+            document.getElementById("tem").style.display = "block";
+            document.getElementById("huh").src = '/images/red-power.png'
+            document.getElementById("click").innerHTML = "Double Click to Off"
+        }
+        function you() {
+            const a = document.getElementById("myRange").disabled = true;
+            const b = document.getElementById("myRange").style.display = "none";
+            const c = document.getElementById("Range").style.display = "block";
+            const d = document.getElementById("Range").disabled = true;
+            document.getElementById("huh").src = '/images/power.png'
+            document.getElementById("click").innerHTML = "Click to On"
+            document.getElementById("val").style.display = "none";
+            document.getElementById("tem").style.display = "none";
+        }
             </script>
-            <!-- <button type="submit">Submit</button>
-    </form> -->
-        <!-- <form action="/ac" method="POST">
-            <label for="">ON / OFF</label><br>
-            <label for="door">Switch</label>
-            <input type="checkbox" name="val" id="door">
-            <br>
-            <br>
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="1" class="slider" id="myRange" name="num">
-                <p>Value: <span id="demo"></span></p>
-            </div>
-            <script>
-                var slider = document.getElementById("myRange");
-                var output = document.getElementById("demo");
-                const a = output.innerHTML = slider.value;
-                console.log(a)
-                
-                slider.oninput = function() {
-                  output.innerHTML = this.value;
-                }
-                </script>
-            <button type="submit">Enter</button>
-        </form> -->
-    
-    
 </body>
 </html>

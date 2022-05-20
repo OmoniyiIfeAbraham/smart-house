@@ -5,41 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light</title>
+    <link rel="stylesheet" href="/css/light.css">
     <style>
         #vid{
             display: none;
         }
     </style>
 </head>
-<body>
-    <h1>Lights</h1>
+<body onload="load()">
+    <h1 style="color: white;">Lights</h1>
 
-    <button onclick="document.getElementById('myImage').src='/images/on.jpg', pics()" id="all">On all the Light</button>
-    <br>
-    <button onclick="document.getElementById('myImage').src='/images/one_on.jpg', pics()" id="all_one">On Light one</button>
-    <br>
-    <button onclick="document.getElementById('myImage').src='/images/two_on.jpg', pics()" id="all_two">On Light two</button>
-    <br>
-    <button onclick="document.getElementById('myImage').src='/images/three_on.jpg', pics()" id="all_three">On Light three</button>
-    <br>
-    <button onclick="document.getElementById('myImage').src='/images/four_on.jpg', pics()" id="all_four">On Light Four</button>
+    <div class="main">
+        <div class="one">
+            <img id="myImage" src="/images/off.jpg" style="width:100%" height="100%">
+            <video src="/vid/house1.mp4" style="width: 100%; height: 100%; object-fit: cover;" autoplay id="vid"></video>
+        </div>
+        <div class="two">
+            <div class="sub-one">
+                <button onclick="document.getElementById('myImage').src='/images/on.jpg', pics()" id="all"><img  id="huh" src="/images/power.png" alt="On all the Light" style="width: 40px; height: 40px; border-radius: 50%;"></button>
+                <p id="all-p" style="color: white;">On all the Light</p>
     
-    <img id="myImage" src="/images/off.jpg" style="width:200px" height="200px">
-    <video src="/vid/house1.mp4" width="300px" height="300px" autoplay id="vid"></video>
-
-
-    <button onclick="document.getElementById('myImage').src='/images/off.jpg', pics(), btnShow()">Off all the Light</button>
-    <button onclick="play()" id="one">On lights in automatic sequence</button>
+                <button onclick="document.getElementById('myImage').src='/images/one_on.jpg', light()" id="all_one"><img  id="huh" src="/images/power.png" alt="On all the Light" style="width: 40px; height: 40px; border-radius: 50%;"></button>
+                <p id="all_one-p" style="color: white;">On Light one</p>
+            </div>
+            <div class="sub-two">
+                <button onclick="document.getElementById('myImage').src='/images/two_on.jpg', light_two()" id="all_two"><img  id="huh" src="/images/power.png" alt="On all the Light" style="width: 40px; height: 40px; border-radius: 50%;"></button>
+                <p id="all_two-p" style="color: white;">On Light two</p>
+    
+                <button onclick="document.getElementById('myImage').src='/images/three_on.jpg', light_three()" id="all_three"><img  id="huh" src="/images/power.png" alt="On all the Light" style="width: 40px; height: 40px; border-radius: 50%;"></button>
+                <p id="all_three-p" style="color: white;">On Light three</p>
+            </div>
+            <div class="sub-three">
+                <button onclick="document.getElementById('myImage').src='/images/four_on.jpg', light_four()" id="all_four"><img  id="huh" src="/images/power.png" alt="On all the Light" style="width: 40px; height: 40px; border-radius: 50%;"></button>
+                <p id="all_four-p" style="color: white;">On Light Four</p>
+    
+                <button onclick="document.getElementById('myImage').src='/images/off.jpg', btnShow()" id="off"><img  id="huh" src="/images/red-power.png" alt="On all the Light" style="width: 40px; height: 40px; border-radius: 50%;"></button>
+                <p id="off-p" style="color: white;">Off all the Light</p>
+            </div>
+            <div class="sub-four">
+                <button onclick="play()" id="one"><img  id="huh" src="/images/power.png" alt="On all the Light" style="width: 40px; height: 40px; border-radius: 50%;"></button>
+                <p id="one-p" style="color: white;">On lights in automatic sequence</p>
+            </div>
+        </div>
+    </div>
 
     <script>
+        function load(){
+            document.getElementById("off").style.display = "none"
+            document.getElementById("off-p").style.display = "none"
+        }
         function play() {
             document.getElementById("myImage").style.display = "none"
             document.getElementById("one").style.display = "none"
+            document.getElementById("one-p").style.display = "none"
             document.getElementById("all").style.display = "none"
+            document.getElementById("all-p").style.display = "none"
             document.getElementById("all_one").style.display = "none"
+            document.getElementById("all_one-p").style.display = "none"
             document.getElementById("all_two").style.display = "none"
+            document.getElementById("all_two-p").style.display = "none"
             document.getElementById("all_three").style.display = "none"
+            document.getElementById("all_three-p").style.display = "none"
             document.getElementById("all_four").style.display = "none"
+            document.getElementById("all_four-p").style.display = "none"
+            document.getElementById("all_four").style.display = "none"
+            document.getElementById("all_four-p").style.display = "none"
+            document.getElementById("off").style.display = "block"
+            document.getElementById("off-p").style.display = "block"
+            document.querySelector(".sub-one").style.display = "none"
+            document.getElementById("off").style.marginLeft = "10%"
             document.getElementById("vid").style.display = "block"
             var x = document.getElementById("vid");
             x.autoplay = true;
@@ -49,13 +83,61 @@
             document.getElementById("vid").style.display = "none"
             document.getElementById("one").style.display = "block"
             document.getElementById("myImage").style.display = "block"
+            document.getElementById("all_one").style.display = "none"
+            document.getElementById("all_one-p").style.display = "none"
+            document.getElementById("all_two").style.display = "none"
+            document.getElementById("all_two-p").style.display = "none"
+            document.getElementById("all_three").style.display = "none"
+            document.getElementById("all_three-p").style.display = "none"
+            document.getElementById("all_four").style.display = "none"
+            document.getElementById("all_four-p").style.display = "none"
+            document.getElementById("one").style.display = "none"
+            document.getElementById("one-p").style.display = "none"
+            document.getElementById("off").style.display = "block"
+            document.getElementById("off-p").style.display = "block"
+            document.getElementById("all").style.display = "none"
+            document.getElementById("all-p").style.display = "none"
+            document.querySelector(".sub-one").style.display = "none"
+            document.getElementById("off").style.marginLeft = "10%"
         }
         function btnShow() {
+            document.getElementById("vid").style.display = "none"
+            document.getElementById("one").style.display = "block"
+            document.getElementById("one-p").style.display = "block"
+            document.getElementById("myImage").style.display = "block"
             document.getElementById("all").style.display = "block"
+            document.getElementById("all-p").style.display = "block"
             document.getElementById("all_one").style.display = "block"
+            document.getElementById("all_one-p").style.display = "block"
             document.getElementById("all_two").style.display = "block"
+            document.getElementById("all_two-p").style.display = "block"
             document.getElementById("all_three").style.display = "block"
+            document.getElementById("all_three-p").style.display = "block"
             document.getElementById("all_four").style.display = "block"
+            document.getElementById("all_four-p").style.display = "block"
+            document.getElementById("off").style.display = "none"
+            document.getElementById("off-p").style.display = "none"
+            document.querySelector(".sub-one").style.display = "flex"
+        }
+        function light(){
+            document.getElementById("off").style.display = "block"
+            document.getElementById("off-p").style.display = "block"
+            document.getElementById("off-p").innerHTML = "Off Light one"
+        }
+        function light_two(){
+            document.getElementById("off").style.display = "block"
+            document.getElementById("off-p").style.display = "block"
+            document.getElementById("off-p").innerHTML = "Off Light one and two"
+        }
+        function light_three(){
+            document.getElementById("off").style.display = "block"
+            document.getElementById("off-p").style.display = "block"
+            document.getElementById("off-p").innerHTML = "Off Light one, two and three"
+        }
+        function light_four(){
+            document.getElementById("off").style.display = "block"
+            document.getElementById("off-p").style.display = "block"
+            document.getElementById("off-p").innerHTML = "Off all the Lights"
         }
     </script>
 </body>

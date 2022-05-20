@@ -1,38 +1,164 @@
-.slidecontainer {
+body{
+    background-color: #000;
+}
+.main{
+    width: 500px;
+    height: 580px;
+    background-color: white;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 20px 25px 33px rgb(0, 0, 0);
+}
+.one{
     width: 100%;
-  }
-  
-  .slider {
-    -webkit-appearance: none;
+    height: 40%;
+    background-color: red;
+    background-image: url("/images/heater.jpg");
+    background-size: cover;
+}
+.two{
     width: 100%;
-    height: 15px;
-    border-radius: 5px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
+    height: 60%;
+    background-color: #15172b;
+}
+#btn{
     border-radius: 50%;
-    background: #04AA6D;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #04AA6D;
-    cursor: pointer;
-  }
-
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 40%;
+    background-image: url("/images/power.png");
+}
+#click{
+    margin-left: 40%;
+    /* margin-right: 40%; */
+}
+#myRange{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+#Range{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+}
+#val{
+    color: white;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+#tem{
+    color: white;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+/* Media Queries */
+@media screen and (max-width: 900px){
+    .main{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+@media screen and (max-width: 735px){
+    .main{
+        margin-left: 15%;
+        margin-right: 10%;
+    }
+}
+@media screen and (max-width: 665px){
+    .main{
+        margin-left: 8%;
+        margin-right: 10%;
+    }
+}
+@media screen and (max-width: 585px){
+    .main{
+        margin-left: 2%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 540px){
+    .main{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 525px){
+    .main{
+        width: 400px;
+        margin-left: 10%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 590px){
+    .main{
+        width: 400px;
+        margin-left: 5%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 455px){
+    .main{
+        width: 400px;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+@media screen and (max-width: 430px){
+    .main{
+        width: 300px;
+        margin-left: 10%;
+        margin-right: 0%;
+    }
+    #btn{
+        margin-left: 35%;
+    }
+    #val{
+        margin-left: 20%;
+    }
+    #tem{
+        margin-left: 20%;
+    }
+    #click{
+        margin-left: 32%;
+    }
+}
+@media screen and (max-width: 380px){
+    .main{
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width: 345px){
+    .main{
+        margin-left: 0%;
+    }
+}
+@media screen and (max-width: 330px){
+    .main{
+        width: 280px;
+        margin-left: 2%;
+    }
+    #btn{
+        margin-left: 30%;
+    }
+    #val{
+        margin-left: 15%;
+    }
+    #tem{
+        margin-left: 15%;
+    }
+    #click{
+        margin-left: 27%;
+    }
+}
+@media screen and (max-width: 315px){
+    .main{
+        width: 270px;
+        margin-left: 0%;
+    }
+}
